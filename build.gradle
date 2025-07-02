@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.example'
+version = '1.0-SNAPSHOT'
+
+sourceCompatibility = '11'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'jakarta.xml.ws:jakarta.xml.ws-api:4.0.0'
+    implementation 'org.apache.cxf:cxf-rt-frontend-jaxws:4.0.2'
+    implementation 'org.apache.cxf:cxf-rt-ws-security:4.0.2'
+    implementation 'org.apache.wss4j:wss4j-ws-security-dom:2.4.0'
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
